@@ -45,7 +45,6 @@ body {
     background-color: var(--color-light);
     color: var(--color-text);
     font-size: var(--font-size-base);
-    line-height: 1.6;
 }
 
 header {
