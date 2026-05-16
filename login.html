@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Gaming Space</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages/login.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 Gaming Space</h1>
+        <p>Tu tienda de componentes y periféricos gamer</p>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="cart.html">Carrito <span id="cart-count">(0)</span></a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="sponsors.html">Patrocinadores</a></li>
+            <li><a href="contact.html">FQA</a></li>
+            <li><a href="help.html">Centro de Ayuda</a></li>
+            <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+
+            <p class="login-footer">¿No tienes cuenta? <a href="#" id="toggleRegister">Regístrate aquí</a></p>
+        </div>
+
+        <div class="register-box" style="display: none;">
+            <h2>Crear Cuenta</h2>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Nombre:</label>
+                    <input type="text" id="regName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Contraseña:</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+
+            <p class="login-footer">¿Ya tienes cuenta? <a href="#" id="toggleLogin">Inicia sesión aquí</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gaming Space. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/shop-system.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/login.js"></script>
+</body>
+</html>
