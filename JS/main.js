@@ -22,10 +22,12 @@ function setupNavigation() {
 }
 
 function updateCartCount() {
+    if (typeof cart === 'undefined') return;
     const count = cart.getCount();
     document.querySelectorAll('#cart-count').forEach(el => {
         el.textContent = `(${count})`;
     });
+
 }
 
 function showNotification(message, type = 'success') {
