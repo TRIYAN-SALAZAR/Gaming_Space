@@ -240,7 +240,7 @@ label {
     display: block;
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
-    color: var(--color-dark);
+    color: var(--color-text);
 }
 
 .alert {
