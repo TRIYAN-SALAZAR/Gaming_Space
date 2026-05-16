@@ -3,21 +3,44 @@
    ============================================ */
 
 :root {
-    --color-primary: #2563eb;       /* Azul principal */
-    --color-secondary: #10b981;     /* Verde */
-    --color-danger: #ef4444;        /* Rojo */
-    --color-dark: #1f2937;          /* Gris oscuro */
-    --color-light: #f3f4f6;         /* Gris claro */
-    --color-white: #ffffff;         /* Blanco */
-    --color-text: #374151;          /* Gris texto */
-    --color-border: #e5e7eb;        /* Gris bordes */
 
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* ============================================
+       PALETA GAMER DARK
+       ============================================ */
+
+    --color-primary: #38bdf8;
+    --color-secondary: #10b981;
+    --color-danger: #ef4444;
+
+    --color-dark: #0f172a;
+    --color-light: #111827;
+
+    --color-white: #1e293b;
+
+    --color-text: #e5e7eb;
+
+    --color-border: rgba(255,255,255,0.08);
+
+    /* ============================================
+       TIPOGRAFIA
+       ============================================ */
+
+    --font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
     --font-size-base: 16px;
     --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1.25rem;
     --font-size-small: 0.875rem;
+
+    /* ============================================
+       ESPACIADOS
+       ============================================ */
 
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -25,10 +48,18 @@
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
 
-    --border-radius: 6px;
+    /* ============================================
+       EFECTOS
+       ============================================ */
+
+    --border-radius: 10px;
 
     --transition: 0.3s ease;
 }
+
+/* ============================================
+   RESET
+   ============================================ */
 
 * {
     margin: 0;
@@ -40,112 +71,296 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ============================================
+   BODY
+   ============================================ */
+
 body {
+
     font-family: var(--font-family);
-    background-color: var(--color-light);
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+
     color: var(--color-text);
+
     font-size: var(--font-size-base);
+
     line-height: 1.6;
+
+    min-height: 100vh;
 }
 
+/* ============================================
+   HEADER
+   ============================================ */
+
 header {
-    background-color: var(--color-white);
-    border-bottom: 2px solid var(--color-primary);
-    padding: var(--spacing-lg) var(--spacing-md);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    background:
+    rgba(15,23,42,0.95);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
+    padding:
+    var(--spacing-lg)
+    var(--spacing-md);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+    0px 0px 20px rgba(56,189,248,0.08);
 }
 
 header h1 {
+
     font-size: var(--font-size-h2);
+
     color: var(--color-primary);
+
     margin-bottom: var(--spacing-sm);
+
+    text-shadow:
+    0px 0px 10px rgba(56,189,248,0.3);
 }
 
 header p {
+
     font-size: var(--font-size-small);
+
     color: var(--color-text);
 }
 
+/* ============================================
+   NAVBAR
+   ============================================ */
+
 .navbar {
-    background-color: var(--color-white);
-    border-bottom: 1px solid var(--color-border);
+
+    background:
+    rgba(15,23,42,0.9);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
     padding: 0 var(--spacing-md);
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+    0px 2px 15px rgba(0,0,0,0.25);
 }
 
 .nav-menu {
+
     display: flex;
+
     justify-content: center;
+
     list-style: none;
+
     gap: var(--spacing-xl);
+
     max-width: 1200px;
+
     margin: 0 auto;
 }
 
 .nav-menu a {
+
     display: block;
+
     padding: var(--spacing-md);
+
     color: var(--color-text);
+
     text-decoration: none;
+
     font-weight: 500;
-    transition: color var(--transition);
+
+    transition: all var(--transition);
+
     border-bottom: 2px solid transparent;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
+
     color: var(--color-primary);
+
     border-bottom-color: var(--color-primary);
+
+    text-shadow:
+    0px 0px 10px rgba(56,189,248,0.5);
 }
 
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+
 .hamburger {
+
     display: none;
+
     flex-direction: column;
+
     cursor: pointer;
 }
 
 .hamburger span {
+
     width: 25px;
+
     height: 2px;
+
     background-color: var(--color-primary);
+
     margin: 5px 0;
+
     transition: var(--transition);
 }
 
+/* ============================================
+   MAIN
+   ============================================ */
+
 main {
+
     max-width: 1200px;
+
     margin: 0 auto;
-    padding: var(--spacing-2xl) var(--spacing-md);
-    min-height: calc(100vh - 300px);
+
+    padding:
+    var(--spacing-2xl)
+    var(--spacing-md);
+
+    min-height:
+    calc(100vh - 300px);
 }
 
+/* ============================================
+   FOOTER
+   ============================================ */
+
 footer {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+
+    background:
+    rgba(15,23,42,0.95);
+
+    color: var(--color-text);
+
     text-align: center;
-    padding: var(--spacing-2xl) var(--spacing-md);
+
+    padding:
+    var(--spacing-2xl)
+    var(--spacing-md);
+
     margin-top: var(--spacing-2xl);
+
+    border-top:
+    1px solid rgba(255,255,255,0.08);
 }
 
 footer p {
-    color: var(--color-white);
+
+    color: var(--color-text);
+
     font-size: var(--font-size-small);
+
     margin: var(--spacing-sm) 0;
 }
 
-h1 { font-size: var(--font-size-h1); margin-bottom: var(--spacing-lg); }
-h2 { font-size: var(--font-size-h2); margin-bottom: var(--spacing-md); }
-h3 { font-size: var(--font-size-h3); margin-bottom: var(--spacing-md); }
-p { margin-bottom: var(--spacing-md); }
-a { color: var(--color-primary); text-decoration: none; }
+/* ============================================
+   TITULOS Y TEXTO
+   ============================================ */
 
-.hidden { display: none !important; }
-.text-center { text-align: center; }
-.mt { margin-top: var(--spacing-lg); }
-.mb { margin-bottom: var(--spacing-lg); }
-.flex { display: flex; }
-.flex-center { display: flex; align-items: center; justify-content: center; }
-.grid { display: grid; gap: var(--spacing-lg); }
+h1 {
+
+    font-size: var(--font-size-h1);
+
+    margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+
+    font-size: var(--font-size-h2);
+
+    margin-bottom: var(--spacing-md);
+
+    color: white;
+}
+
+h3 {
+
+    font-size: var(--font-size-h3);
+
+    margin-bottom: var(--spacing-md);
+
+    color: white;
+}
+
+p {
+
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-text);
+}
+
+a {
+
+    color: var(--color-primary);
+
+    text-decoration: none;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt {
+    margin-top: var(--spacing-lg);
+}
+
+.mb {
+    margin-bottom: var(--spacing-lg);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.grid {
+
+    display: grid;
+
+    gap: var(--spacing-lg);
+}
