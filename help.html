@@ -31,6 +31,7 @@
         <li>
           <a href="cart.html"> Carrito <span id="cart-count">(0)</span> </a>
         </li>
+        <li><a href="sponsors.html">Patrocinadores</a> </li>
 
         <li>
           <a href="contact.html"> FAQ </a>
@@ -91,14 +92,11 @@
         </p>
 
         <form id="helpForm">
-          <input type="text" id="userName" placeholder="Nombre" required />
+          <label class="form-label" for="user">Nombre</label>
+          <input type="text" id="userName" placeholder="Benito" required />
 
-          <input
-            type="email"
-            id="userEmail"
-            placeholder="Correo electrónico"
-            required
-          />
+           <label class="form-label" for="mail">Email</label>
+           <input type="email" id="userEmail" class="form-control" placeholder="todopro@gmail.com"required/>
 
           <textarea
             id="userMessage"
