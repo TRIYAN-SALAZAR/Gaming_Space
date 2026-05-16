@@ -1,52 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Centro de Ayuda</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/pages/help.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/help.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>🎮 Gaming Space</h1>
-        <p>Centro de Ayuda y Soporte</p>
+      <h1>🎮 Gaming Space</h1>
+      <p>Centro de Ayuda y Soporte</p>
     </header>
 
     <nav class="navbar">
-        <ul class="nav-menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="products.html">Productos</a></li>
-            <li><a href="cart.html">Carrito <span id="cart-count">(0)</span></a></li>
-            <li><a href="contact.html">FQA</a></li>
-            <li><a href="help.html" class="active">Centro de Ayuda</a></li>
-        </ul>
+      <ul class="nav-menu">
+        <li>
+          <a href="index.html"> Inicio </a>
+        </li>
 
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <li>
+          <a href="products.html"> Productos </a>
+        </li>
+
+        <li>
+          <a href="cart.html"> Carrito <span id="cart-count">(0)</span> </a>
+        </li>
+
+        <li>
+          <a href="contact.html"> FAQ </a>
+        </li>
+
+        <li>
+          <a href="help.html" class="active"> Centro de Ayuda </a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
 
     <main>
+      <section class="help-hero">
+        <h2>Bienvenido al Centro de Ayuda</h2>
 
-        <!-- AQUI VA TODO TU CONTENIDO DE AYUDA -->
+        <p>
+          Esta sección está dedicada a brindar soporte a los usuarios de Gaming
+          Space en caso de encontrar errores, problemas de navegación o fallos
+          dentro del sitio web.
+        </p>
 
+        <p>
+          Nuestro objetivo es mejorar continuamente la experiencia de los
+          usuarios y ofrecer soluciones rápidas a cualquier inconveniente
+          detectado.
+        </p>
+      </section>
+
+      <section class="error-section">
+        <h2>Ejemplo de Error 404</h2>
+
+        <p>
+          Un error 404 ocurre cuando una página no existe, fue eliminada o la
+          dirección ingresada es incorrecta.
+        </p>
+
+        <p>
+          Puedes visualizar un ejemplo de este tipo de error presionando el
+          siguiente botón:
+        </p>
+
+        <a href="pagina-inexistente.html" class="btn btn-primary">
+          Probar Error 404
+        </a>
+      </section>
+
+      <section class="support-section">
+        <h2>Reportar un Problema</h2>
+
+        <p>
+          Si encontraste algún error dentro del sitio, puedes enviar un reporte
+          para que nuestro equipo revise y solucione el problema lo antes
+          posible.
+        </p>
+
+        <form id="helpForm">
+          <input type="text" id="userName" placeholder="Nombre" required />
+
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Correo electrónico"
+            required
+          />
+
+          <textarea
+            id="userMessage"
+            placeholder="Describe el problema encontrado..."
+            rows="6"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn btn-primary">Enviar Reporte</button>
+        </form>
+
+        <p id="responseMessage"></p>
+      </section>
     </main>
-
     <footer>
-        <p>&copy; 2026 Gaming Space. Todos los derechos reservados.</p>
+      <p>&copy; 2026 Gaming Space. Todos los derechos reservados.</p>
     </footer>
-
     <script src="js/main.js"></script>
     <script src="js/help.js"></script>
-
-</body>
+  </body>
 </html>
