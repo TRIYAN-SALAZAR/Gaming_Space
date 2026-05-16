@@ -1,0 +1,167 @@
+.sponsors-hero{
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   CARRUSEL
+   ============================================ */
+
+.carousel-section{
+
+    overflow: hidden;
+
+    margin-bottom: 60px;
+
+    position: relative;
+
+    background:
+    rgba(255,255,255,0.04);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 30px 20px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+    0px 0px 25px rgba(56,189,248,0.12);
+}
+
+.carousel-track{
+
+    display: flex;
+
+    gap: 50px;
+
+    width: max-content;
+
+    animation:
+    scrollLogos 20s linear infinite;
+}
+
+.carousel-track img{
+
+    width: 150px;
+
+    height: 80px;
+
+    object-fit: contain;
+
+    padding: 15px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    border-radius: 14px;
+
+    opacity: 0.85;
+
+    transition: 0.3s;
+
+    filter:
+    grayscale(100%);
+}
+
+.carousel-track img:hover{
+
+    opacity: 1;
+
+    filter:
+    grayscale(0%);
+
+    transform:
+    scale(1.08)
+    translateY(-4px);
+
+    background:
+    rgba(56,189,248,0.12);
+
+    box-shadow:
+    0px 0px 20px rgba(56,189,248,0.25);
+}
+
+@keyframes scrollLogos{
+
+    from{
+
+        transform: translateX(0);
+    }
+
+    to{
+
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.sponsors-grid{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.sponsor-card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+
+    box-shadow:
+    0px 0px 15px rgba(56,189,248,0.08);
+}
+
+.sponsor-card:hover{
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0px 0px 25px rgba(56,189,248,0.2);
+}
+
+.sponsor-card img{
+
+    width: 140px;
+
+    height: auto;
+
+    margin-bottom: 20px;
+}
+
+.sponsor-card h3{
+
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.sponsor-card p{
+
+    color: #d1d5db;
+
+    line-height: 1.6;
+}
