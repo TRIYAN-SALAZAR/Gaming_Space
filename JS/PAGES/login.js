@@ -1,39 +1,87 @@
-const toggleRegister = document.getElementById('toggleRegister');
-const toggleLogin = document.getElementById('toggleLogin');
-const loginBox = document.querySelector('.login-box');
-const registerBox = document.querySelector('.register-box');
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
+const loginForm =
+    document.getElementById("loginForm");
+const loginMessage =
+    document.getElementById("loginMessage");
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email =
+        document.getElementById("loginEmail")
+        .value;
+    const password =
+        document.getElementById("loginPassword")
+        .value;
 
-toggleRegister.addEventListener('click', (e) => {
-    e.preventDefault();
-    loginBox.style.display = 'none';
-    registerBox.style.display = 'block';
-});
+    /* ============================================
+       OBTENER USUARIO GUARDADO
+       ============================================ */
+    const storedUser =
+        JSON.parse(
+            localStorage.getItem("user")
+        );
 
-toggleLogin.addEventListener('click', (e) => {
-    e.preventDefault();
-    loginBox.style.display = 'block';
-    registerBox.style.display = 'none';
-});
+    /* ============================================
+       VALIDAR EXISTENCIA
+       ============================================ */
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    
-    console.log('Login:', { email, password });
-    alert('Sesión iniciada como: ' + email);
-    loginForm.reset();
-});
+    if (!storedUser) {
 
-registerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('regName').value;
-    const email = document.getElementById('regEmail').value;
-    const password = document.getElementById('regPassword').value;
-    
-    console.log('Registro:', { name, email, password });
-    alert('Cuenta creada para: ' + name);
-    registerForm.reset();
+        loginMessage.textContent =
+
+            "No existe una cuenta registrada.";
+
+        loginMessage.style.color =
+            "#ef4444";
+
+        return;
+    }
+
+    /* ============================================
+       VALIDAR CREDENCIALES
+       ============================================ */
+
+    if (
+
+        email === storedUser.email &&
+
+        password === storedUser.password
+    ) {
+
+        /* ============================================
+           CREAR SESION
+           ============================================ */
+
+        localStorage.setItem(
+
+            "loggedUser",
+
+            JSON.stringify(storedUser)
+        );
+
+        loginMessage.textContent =
+
+            "Inicio de sesión exitoso.";
+
+        loginMessage.style.color =
+            "#10b981";
+
+        /* ============================================
+           REDIRECCION
+           ============================================ */
+
+        setTimeout(() => {
+
+            window.location.href =
+                "index.html";
+
+        }, 1500);
+
+    } else {
+
+        loginMessage.textContent =
+
+            "Correo o contraseña incorrectos.";
+
+        loginMessage.style.color =
+            "#ef4444";
+    }
 });
